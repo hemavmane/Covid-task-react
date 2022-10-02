@@ -1,0 +1,72 @@
+body{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+
+}
+h1{
+    color: goldenrod;
+    text-align: center;
+}
+.covid-info_container{
+  text-align: center;
+  margin: 0%;
+  padding: 0%;
+}
+.covid-info_container2,.covid-info_container3{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr ;
+    gap: 12rem;
+    padding: 20px;
+    align-items: center;
+    align-content: center;
+ }
+
+ .info{
+    display: flex;
+    width: 200px;
+    height:100px;
+   align-items: center;
+   align-content: center;
+   padding: 20px;
+   box-shadow: 6px 5px 7px gray;
+   text-align: center;
+   color: white;
+   border: none;
+   outline: none;
+ }
+.info1{
+    text-align: center;
+    background-color:pink;
+}
+.info2{
+    background-color: rgb(223, 96, 96);
+}
+.info4{
+    background-color: red;
+}
+.info3{
+background-color: goldenrod;
+}
+.info5{
+    background-color: green;
+}
+.info6{
+    background-color: rgb(39, 190, 39);
+}
+button{
+    position: absolute;
+    right:5%;
+    background-color: goldenrod;
+    width: 100px;
+    height: 30px;
+    box-shadow: 2px 2px 2px;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+button:hover{
+    border-radius: 10px;
+    /* transition-duration: 3s; */
+}
