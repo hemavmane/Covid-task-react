@@ -70,10 +70,28 @@ button{
 
 
 .img_co{
-    width: 40px;
+    width: 15%;
+    height: 15%;
+    border: 5px solid white;
+    background-color: rgb(21, 99, 72);
 }
 
-.country_img{
-    display: grid;
-    grid-template-rows: auto;
+
+/* .country{
+    display: flex;
+} */
+.population1{
+   background-color:rgb(82, 150, 162);
+}
+.country1{
+  
+    background-color:rgb(178, 188, 177) ;
+} 
+
+.updated1{
+    background-color: rgb(187, 215, 49);
+}
+
+.cases1{
+    background-color:rgb(18, 215, 49) ;
 }

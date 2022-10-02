@@ -5,6 +5,7 @@ export function Covid(){
     const [covidinfo,setCovidInfo]=useState({})
     const [country,setCountry]=useState([])
    const[isblack,setisBlack]=useState("black","white")
+   const[searchcountry,setSearchCountry]=useState("")
     useEffect(()=>{
         axios.get(`https://disease.sh/v3/covid-19/all`)
         .then(res=>{
@@ -21,6 +22,10 @@ export function Covid(){
         })
     },[])
 
+   const countrydata=()=>{
+      
+   }
+
     const changetheme=()=>{
            setisBlack(!isblack) 
     }
@@ -32,6 +37,15 @@ export function Covid(){
     <button onClick={changetheme}>Change mode</button>
 
         <h1 className="heading">Covid-19 Across World</h1>
+
+
+       <div className="inputs">
+        <input type="text" value={searchcountry} 
+        onChange={(e)=>setSearchCountry(e.target.value)} />
+        <button onClick={countrydata}>Click</button>
+       </div>
+
+
         <div className="population">
      <h2>POPULATION</h2>
      <h2>{covidinfo.population}</h2>
@@ -70,12 +84,11 @@ export function Covid(){
     country.map((el)=>{
        return(
 <div className="country">
-<div className="country_img">
-<img className="img_co" src={el.countryInfo.flag} alt="" /></div>
-<h4>{el.country}</h4>
-<h4>{el.updated}</h4>
-<h4>{el.population}</h4>
-<h4>{el.cases}</h4>
+<img className="img_co" src={el.countryInfo.flag} alt="" />
+<h4 className="country1">{el.country}</h4>
+<h4 className="updated1">{el.updated}</h4>
+<h4 className="population1">{el.population}</h4>
+<h4 className="cases1">{el.cases}</h4>
 
 </div>
        )
